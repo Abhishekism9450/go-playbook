@@ -1,0 +1,14 @@
+- name: Run TFC project listing
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: List projects in TFC
+      hashicorp.tfc.projects_info:
+        token: "{{ token }}"
+        hostname: "app.terraform.io"
+        organization: "{{ org }}"
+      register: output
+
+    - name: Show projects
+      debug:
+        var: output.projects
