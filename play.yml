@@ -5,7 +5,7 @@
     - name: List projects in TFC
       hashicorp.tfc.projects_info:
         token: "{{ token }}"
-        hostname: "app.terraform.io"
+        hostname: "{{ hostname }}"
         organization: "{{ org }}"
       register: output
 
