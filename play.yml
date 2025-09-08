@@ -2,7 +2,7 @@
   hosts: localhost
   gather_facts: false
   tasks:
-    - name: List projects in TFC
+    - name: List projects in HCP
       hashicorp.tfc.projects_info:
         token: "{{ token }}"
         hostname: "{{ hostname }}"
